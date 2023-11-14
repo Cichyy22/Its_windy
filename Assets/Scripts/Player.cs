@@ -12,10 +12,12 @@ public class Player : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask WhatIsGround;
     private bool grounded;
+
+    public int AreBasketPicked;
     // Start is called before the first frame update
     void Start()
     {
-        
+        // AreBasketPicked = PlayerPrefs.GetInt("BasketPick");
     }
     void FixedUpdate(){
         grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, WhatIsGround);
